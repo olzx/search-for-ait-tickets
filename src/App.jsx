@@ -1,5 +1,6 @@
 import "./app.scss"
 import Sorting from "./components/Sorting/Sorting"
+import TicketCard from "./components/TicketCard/TicketCard"
 import Transfer from "./components/Transfer/Transfer"
 
 export default function App() {
@@ -15,6 +16,9 @@ export default function App() {
                     console.log("В блоке Sorting выбрана вкладка: " + tabName)
                 }
             />
+            <TicketCard></TicketCard>
+            <TicketCard></TicketCard>
+            <TicketCard></TicketCard>
         </>
     )
 }

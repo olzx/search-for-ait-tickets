@@ -1,0 +1,127 @@
+.ticketCard {
+    margin-top: 20px;
+    max-width: 732px;
+    box-shadow: 0px 1px 4px rgba(33, 33, 38, 0.555);
+    transition: all 0.2s;
+    display: flex;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 2px 8px rgba(33, 33, 38, 0.76);
+    }
+
+    &__leftPanel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        flex-grow: 1;
+        border-right: 2px solid #ccc;
+    }
+
+    &__rightPanel {
+        flex-grow: 3;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    &__price {
+        font-size: 25px;
+        font-weight: bold;
+        color: #4d4d4d;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__upPanel {
+    }
+
+    &__middlePanel {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.airline {
+    font-weight: bold;
+}
+
+.flightInfo {
+    display: flex;
+
+    &__left {
+        text-align: left;
+        flex-grow: 1;
+    }
+
+    &__middle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-grow: 3;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 3px;
+            background-color: #969696;
+            top: 37px;
+            border-radius: 10px;
+        }
+    }
+
+    &__right {
+        text-align: right;
+        flex-grow: 1;
+    }
+
+    &__time {
+        font-size: 25px;
+    }
+
+    &__city {
+        color: #969696;
+        font-weight: bold;
+    }
+
+    &__date {
+        color: #969696;
+    }
+
+    &__duration {
+        color: #969696;
+        padding-top: 10px;
+    }
+}
+
+.transfers {
+    max-width: 200px;
+
+    &__amount {
+        font-weight: bold;
+        font-size: 17px;
+        color: #969696;
+    }
+
+    &__locations {
+        color: #363636;
+        font-weight: bold;
+    }
+}
+
+.selectButton {
+    padding: 15px 30px;
+    background-color: #f57b09;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: #f5a209;
+    }
+}
