@@ -3,8 +3,13 @@ import airPlane from "./assets/airPlane.jpg"
 import Sorting from "./components/Sorting/Sorting"
 import TicketCard from "./components/TicketCard/TicketCard"
 import Transfer from "./components/Transfer/Transfer"
+import useGetTickets from "./hooks/useGetTickets"
 
 export default function App() {
+    const { tickets, loading, error } = useGetTickets()
+
+    console.log(tickets)
+
     return (
         <>
             <div className="image">
@@ -28,8 +33,6 @@ export default function App() {
                             )
                         }
                     />
-                    <TicketCard></TicketCard>
-                    <TicketCard></TicketCard>
                     <TicketCard></TicketCard>
                 </div>
             </div>
