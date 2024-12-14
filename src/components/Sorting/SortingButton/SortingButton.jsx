@@ -1,4 +1,4 @@
-import "./SortingButton.css"
+import "./SortingButton.scss"
 
 export default function SortingButton({ children, isActive, ...props }) {
     const classIsActive = isActive
