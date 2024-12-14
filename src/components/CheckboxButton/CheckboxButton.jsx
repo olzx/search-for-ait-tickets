@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./CheckboxButton.css"
+import "./CheckboxButton.scss"
 
 export default function CheckboxButton({ children, isActive, ...props }) {
     const isCheckmark = isActive && <span>&#x2713;</span>
