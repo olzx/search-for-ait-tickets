@@ -1,6 +1,6 @@
 import { useState } from "react"
 import CheckboxButton from "../CheckboxButton/CheckboxButton"
-import "./Transfer.css"
+import "./Transfer.scss"
 
 export default function Transfer({ onClick }) {
     const [tabName, setTabName] = useState("all")
