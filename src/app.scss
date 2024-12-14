@@ -1,1 +1,12 @@
+.content {
+    display: flex;
+    margin-top: 50px;
 
+    &__leftPanel {
+        margin-right: 20px;
+    }
+
+    &__rightPanel {
+        width: 732px;
+    }
+}
