@@ -1,4 +1,4 @@
-import "./app.css"
+import "./app.scss"
 import Sorting from "./components/Sorting/Sorting"
 import Transfer from "./components/Transfer/Transfer"
 
