@@ -7,7 +7,7 @@ export default function Transfer({ onClick }) {
 
     function toggleTabName(name) {
         setTabName(name)
-        onClick && onClick(tabName)
+        onClick && onClick(name)
     }
 
     return (

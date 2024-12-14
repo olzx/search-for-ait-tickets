@@ -7,7 +7,7 @@ export default function Sorting({ onClick }) {
 
     function handleClickTabName(name) {
         settabName(name)
-        onClick && onClick(tabName)
+        onClick && onClick(name)
     }
 
     return (
