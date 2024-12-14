@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./Sorting.css"
+import "./Sorting.scss"
 import SortingButton from "./SortingButton/SortingButton"
 
 export default function Sorting({ onClick }) {
