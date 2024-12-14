@@ -1,0 +1,31 @@
+.checkbox-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-button:hover {
+    background-color: #3f80fa25;
+}
+
+.checkbox-button__square {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3c8aff;
+    margin-right: 10px;
+}
+
+.checkbox-button__checkmark {
+    position: absolute;
+    top: -1px;
+    left: 3.5px;
+    color: #3c8aff;
+    font-weight: bold;
+}
+
+.checkbox-button__label {
+    font-size: 15px;
+}

@@ -1,3 +1,6 @@
+import "./app.css"
+import Transfer from "./components/Transfer/Transfer"
+
 export default function App() {
-    return <h1>Hello World</h1>
+    return <Transfer />
 }
