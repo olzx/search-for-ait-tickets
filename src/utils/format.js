@@ -61,7 +61,8 @@ export function transformTicketsData(ticketsArray) {
     return ticketsArray.map((ticketData) => {
         return {
             id: ticketData.id, // id
-            price: formatRubles(ticketData.price), // цена билета
+            price: formatRubles(ticketData.price), // цена билета в форматированном виде
+            priceInt: ticketData.price, // цена билета в числовом формате
             airline: ticketData.airline, // авиакомпания
             baggage: ticketData.baggage, // багаж true/false
             class: ticketData.class, // класс эконом/бизнес
@@ -71,7 +72,8 @@ export function transformTicketsData(ticketsArray) {
                     ticketData.flightInfo.departureTime
                 ), // время вылета
                 destination: ticketData.flightInfo.destination, // место назначения
-                duration: formatDuration(ticketData.flightInfo.duration), // продолжительность
+                duration: formatDuration(ticketData.flightInfo.duration), // продолжительность в форматированном виде
+                durationInt: ticketData.flightInfo.duration, // продолжительность в числовом формате
                 origin: ticketData.flightInfo.origin, // место вылета
             },
             transfers: ticketData.transfers, // кол-во пересадок
