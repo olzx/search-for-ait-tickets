@@ -1,0 +1,188 @@
+{
+    "tickets": [
+        {
+            "id": 1,
+            "price": 15000,
+            "flightInfo": {
+                "origin": "Москва",
+                "destination": "Берлин",
+                "departureTime": "2024-12-20T08:30:00",
+                "arrivalTime": "2024-12-20T11:15:00",
+                "duration": 165
+            },
+            "transfers": 0,
+            "airline": "Аэрофлот",
+            "class": "эконом",
+            "baggage": true
+        },
+        {
+            "id": 2,
+            "price": 35000,
+            "flightInfo": {
+                "origin": "Нью-Йорк",
+                "destination": "Токио",
+                "departureTime": "2024-12-21T16:00:00",
+                "arrivalTime": "2024-12-22T08:00:00",
+                "duration": 840
+            },
+            "transfers": 1,
+            "transferLocations": ["Сан-Франциско"],
+            "airline": "Япония Эйрлайнс",
+            "class": "бизнес",
+            "baggage": true
+        },
+        {
+            "id": 3,
+            "price": 10000,
+            "flightInfo": {
+                "origin": "Париж",
+                "destination": "Рим",
+                "departureTime": "2024-12-18T10:00:00",
+                "arrivalTime": "2024-12-18T11:45:00",
+                "duration": 105
+            },
+            "transfers": 0,
+            "airline": "Эйр Франс",
+            "class": "эконом",
+            "baggage": false
+        },
+        {
+            "id": 4,
+            "price": 20000,
+            "flightInfo": {
+                "origin": "Лондон",
+                "destination": "Дубай",
+                "departureTime": "2024-12-19T15:00:00",
+                "arrivalTime": "2024-12-19T23:30:00",
+                "duration": 510
+            },
+            "transfers": 0,
+            "airline": "Эмирейтс",
+            "class": "бизнес",
+            "baggage": true
+        },
+        {
+            "id": 5,
+            "price": 12000,
+            "flightInfo": {
+                "origin": "Стамбул",
+                "destination": "Афины",
+                "departureTime": "2024-12-17T09:00:00",
+                "arrivalTime": "2024-12-17T10:30:00",
+                "duration": 90
+            },
+            "transfers": 0,
+            "airline": "Турецкие Авиалинии",
+            "class": "эконом",
+            "baggage": false
+        },
+        {
+            "id": 6,
+            "price": 45000,
+            "flightInfo": {
+                "origin": "Лос-Анджелес",
+                "destination": "Сидней",
+                "departureTime": "2024-12-22T14:00:00",
+                "arrivalTime": "2024-12-24T08:00:00",
+                "duration": 2280
+            },
+            "transfers": 3,
+            "transferLocations": ["Сан-Франциско", "Гонолулу", "Окленд"],
+            "airline": "Кантас",
+            "class": "бизнес",
+            "baggage": true
+        },
+        {
+            "id": 7,
+            "price": 30000,
+            "flightInfo": {
+                "origin": "Мумбаи",
+                "destination": "Торонто",
+                "departureTime": "2024-12-20T05:00:00",
+                "arrivalTime": "2024-12-21T19:00:00",
+                "duration": 1920
+            },
+            "transfers": 3,
+            "transferLocations": ["Дубай", "Лондон", "Нью-Йорк"],
+            "airline": "Индийские Авиалинии",
+            "class": "эконом",
+            "baggage": true
+        },
+        {
+            "id": 8,
+            "price": 55000,
+            "flightInfo": {
+                "origin": "Пекин",
+                "destination": "Буэнос-Айрес",
+                "departureTime": "2024-12-19T23:00:00",
+                "arrivalTime": "2024-12-22T10:00:00",
+                "duration": 2860
+            },
+            "transfers": 4,
+            "transferLocations": ["Шанхай", "Париж", "Нью-Йорк", "Сан-Паулу"],
+            "airline": "Китайские Южные Авиалинии",
+            "class": "бизнес",
+            "baggage": true
+        },
+        {
+            "id": 9,
+            "price": 20000,
+            "flightInfo": {
+                "origin": "Кейптаун",
+                "destination": "Токио",
+                "departureTime": "2024-12-18T13:00:00",
+                "arrivalTime": "2024-12-20T18:00:00",
+                "duration": 3135
+            },
+            "transfers": 4,
+            "transferLocations": ["Йоханнесбург", "Дубай", "Бангкок", "Сеул"],
+            "airline": "Сингапурские Авиалинии",
+            "class": "эконом",
+            "baggage": false
+        },
+        {
+            "id": 10,
+            "price": 40000,
+            "flightInfo": {
+                "origin": "Москва",
+                "destination": "Лима",
+                "departureTime": "2024-12-15T07:00:00",
+                "arrivalTime": "2024-12-17T11:00:00",
+                "duration": 3120
+            },
+            "transfers": 5,
+            "transferLocations": [
+                "Париж",
+                "Нью-Йорк",
+                "Мехико",
+                "Сантьяго",
+                "Богота"
+            ],
+            "airline": "Аэрофлот",
+            "class": "бизнес",
+            "baggage": true
+        },
+        {
+            "id": 11,
+            "price": 37000,
+            "flightInfo": {
+                "origin": "Токио",
+                "destination": "Кейптаун",
+                "departureTime": "2024-12-21T22:00:00",
+                "arrivalTime": "2024-12-24T08:00:00",
+                "duration": 2700
+            },
+            "transfers": 5,
+            "transferLocations": [
+                "Сеул",
+                "Бангкок",
+                "Дубай",
+                "Наироби",
+                "Йоханнесбург"
+            ],
+            "airline": "Япония Эйрлайнс",
+            "class": "эконом",
+            "baggage": true
+        }
+    ]
+}
