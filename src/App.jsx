@@ -6,24 +6,15 @@ import TicketCard from "./components/TicketCard/TicketCard"
 import Transfer from "./components/Transfer/Transfer"
 import useGetTickets from "./hooks/useGetTickets"
 import filterDataFunc from "./utils/filterDataFunc"
+import sortedDataFunc from "./utils/sortedDataFunc"
 
 export default function App() {
     const { tickets, loading, error } = useGetTickets()
     const [sorting, setSorting] = useState("lowPrice")
     const [transfer, setTransfer] = useState("all")
 
-    const filterData = filterDataFunc(tickets, transfer)
-
-    const sortedData = useMemo(() => {
-        return [...filterData].sort((a, b) => {
-            switch (sorting) {
-                case "lowPrice":
-                    return a.priceInt - b.priceInt
-                case "fast":
-                    return a.flightInfo.durationInt - b.flightInfo.durationInt
-            }
-        })
-    }, [filterData, sorting])
+    const filterData = filterDataFunc(tickets, transfer) // фильтрация по кол-ву пересадок
+    const sortedData = sortedDataFunc(filterData, sorting) // сортирует уже отфильтрованый массив по самому дешевому или самому быстрому
 
     return (
         <>
