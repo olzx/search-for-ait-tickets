@@ -7,6 +7,7 @@ import Transfer from "./components/Transfer/Transfer"
 import useGetTickets from "./hooks/useGetTickets"
 import filterDataFunc from "./utils/filterDataFunc"
 import sortedDataFunc from "./utils/sortedDataFunc"
+import Preloader from "./components/Preloader/Preloader"
 
 export default function App() {
     const { tickets, loading, error } = useGetTickets()
@@ -18,7 +19,7 @@ export default function App() {
 
     return (
         <>
-            {loading && <span>Загрузка...</span>}
+            {loading && <Preloader />}
             {!loading && (
                 <>
                     <div className="image">
@@ -39,6 +40,7 @@ export default function App() {
                                 <TicketCard
                                     key={ticket.id}
                                     ticketData={ticket}
+                                    onClick={() => setSelectTicketCard(ticket)}
                                 ></TicketCard>
                             ))}
                         </div>
