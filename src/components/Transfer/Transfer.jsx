@@ -2,6 +2,7 @@ import { useState } from "react"
 import CheckboxButton from "../CheckboxButton/CheckboxButton"
 import "./Transfer.scss"
 import getTransfersArray from "../../utils/getTransfersArray"
+import getChangeTransferText from "../../utils/getChangeTransferText"
 
 export default function Transfer({ onClick, ticketsData }) {
     const [tabName, setTabName] = useState("all")
@@ -13,17 +14,6 @@ export default function Transfer({ onClick, ticketsData }) {
 
     // массив с кол-вом пересадок
     const sortedTransfersArray = getTransfersArray(ticketsData)
-
-    // окончание строки в зависимости от числа
-    function getTransfersText(count) {
-        if (count === 1) {
-            return `${count} пересадка`
-        } else if (count >= 2 && count <= 4) {
-            return `${count} пересадки`
-        } else {
-            return `${count} пересадок`
-        }
-    }
 
     return (
         <div className="transfer">
@@ -47,7 +37,7 @@ export default function Transfer({ onClick, ticketsData }) {
                         onClick={() => toggleTabName(transfer.toString())}
                         isActive={tabName == transfer.toString()}
                     >
-                        {getTransfersText(transfer)}
+                        {getChangeTransferText(transfer)}
                     </CheckboxButton>
                 ) : null
             )}
