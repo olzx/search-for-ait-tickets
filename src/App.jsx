@@ -18,6 +18,8 @@ export default function App() {
                     return true
                 case "without":
                     return ticket.transfers == 0
+                default:
+                    return ticket.transfers == Number(transfer)
             }
         })
     }, [tickets, transfer])
