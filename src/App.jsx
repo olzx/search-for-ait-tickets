@@ -5,24 +5,14 @@ import Sorting from "./components/Sorting/Sorting"
 import TicketCard from "./components/TicketCard/TicketCard"
 import Transfer from "./components/Transfer/Transfer"
 import useGetTickets from "./hooks/useGetTickets"
+import filterDataFunc from "./utils/filterData"
 
 export default function App() {
     const { tickets, loading, error } = useGetTickets()
     const [sorting, setSorting] = useState("lowPrice")
     const [transfer, setTransfer] = useState("all")
 
-    const filterData = useMemo(() => {
-        return [...tickets].filter((ticket) => {
-            switch (transfer) {
-                case "all":
-                    return true
-                case "without":
-                    return ticket.transfers == 0
-                default:
-                    return ticket.transfers == Number(transfer)
-            }
-        })
-    }, [tickets, transfer])
+    const filterData = filterDataFunc(tickets, transfer)
 
     const sortedData = useMemo(() => {
         return [...filterData].sort((a, b) => {
