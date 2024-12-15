@@ -9634,7 +9634,7 @@ function $f() {
     return (zl.createRoot = h.createRoot), (zl.hydrateRoot = h.hydrateRoot), zl
 }
 var Hf = $f()
-const Wf = "/assets/airPlane-DbVVehsw.jpg"
+const Wf = "./assets/airPlane-DbVVehsw.jpg"
 function Oa({ children: h, isActive: k, ...d }) {
     const M = k ? "sorting__button sorting__button_active" : "sorting__button"
     return v.jsx("div", { className: M, ...d, children: h })
