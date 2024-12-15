@@ -70,7 +70,10 @@ export default function ShowInfoTickedCard({
                 </li>
             </ul>
             <hr />
-            <Button onClick={() => onCloseModal()}>Закрыть</Button>
+            <footer className="showInfoTickedCard__bottom">
+                <Button onClick={() => onCloseModal()}>Закрыть</Button>
+                <Button onClick={() => onCloseModal()}>Забронировать</Button>
+            </footer>
         </Modal>
     )
 }
