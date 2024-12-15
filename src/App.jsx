@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useState } from "react"
 import "./app.scss"
 import airPlane from "./assets/airPlane.jpg"
 import Sorting from "./components/Sorting/Sorting"
@@ -9,6 +9,7 @@ import filterDataFunc from "./utils/filterDataFunc"
 import sortedDataFunc from "./utils/sortedDataFunc"
 import Preloader from "./components/Preloader/Preloader"
 import ShowInfoTickedCard from "./components/ShowInfoTickedCard/ShowInfoTickedCard"
+import ShowBookModal from "./components/ShowBookModal/ShowBookModal"
 
 export default function App() {
     const { tickets, loading, error } = useGetTickets()
@@ -16,8 +17,7 @@ export default function App() {
     const [transfer, setTransfer] = useState("all")
     const [selectTicketCard, setSelectTicketCard] = useState(false)
     const [isOpenModal, setIsOpenModal] = useState(false)
-
-    console.log(selectTicketCard)
+    const [isOpenBookModal, setIsOpenBookModal] = useState(false)
 
     const filterData = filterDataFunc(tickets, transfer) // фильтрация по кол-ву пересадок
     const sortedData = sortedDataFunc(filterData, sorting) // сортирует уже отфильтрованый массив по самому дешевому или самому быстрому
@@ -62,8 +62,17 @@ export default function App() {
                             isOpenModal={isOpenModal}
                             onCloseModal={() => setIsOpenModal(false)}
                             selectTicketCard={selectTicketCard}
+                            onOpenBookModal={(curentData) => {
+                                console.log(
+                                    "Забронировать " +
+                                        curentData.flightInfo.origin
+                                )
+                                setIsOpenModal(false)
+                                setIsOpenBookModal(true)
+                            }}
                         ></ShowInfoTickedCard>
                     )}
+                    {isOpenBookModal && <ShowBookModal></ShowBookModal>}
                 </>
             )}
         </>
