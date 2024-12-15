@@ -1,0 +1,26 @@
+dialog {
+    width: 500px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение */
+    backdrop-filter: blur(2px); /* Размытие фона */
+    z-index: 9; /* Под dialog */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-scroll {
+    overflow: hidden; /* Запрещаем прокрутку */
+    height: 100%; /* Фиксируем высоту */
+}
