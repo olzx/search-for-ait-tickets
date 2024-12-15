@@ -5,7 +5,7 @@ import Sorting from "./components/Sorting/Sorting"
 import TicketCard from "./components/TicketCard/TicketCard"
 import Transfer from "./components/Transfer/Transfer"
 import useGetTickets from "./hooks/useGetTickets"
-import filterDataFunc from "./utils/filterData"
+import filterDataFunc from "./utils/filterDataFunc"
 
 export default function App() {
     const { tickets, loading, error } = useGetTickets()
