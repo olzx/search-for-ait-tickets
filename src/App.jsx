@@ -8,8 +8,6 @@ import useGetTickets from "./hooks/useGetTickets"
 export default function App() {
     const { tickets, loading, error } = useGetTickets()
 
-    console.log(tickets)
-
     return (
         <>
             <div className="image">
@@ -33,7 +31,14 @@ export default function App() {
                             )
                         }
                     />
-                    <TicketCard></TicketCard>
+                    {loading && <span>Загрузка...</span>}
+                    {!loading &&
+                        tickets.map((ticket) => (
+                            <TicketCard
+                                key={ticket.id}
+                                ticketData={ticket}
+                            ></TicketCard>
+                        ))}
                 </div>
             </div>
         </>
