@@ -63,16 +63,17 @@ export default function App() {
                             onCloseModal={() => setIsOpenModal(false)}
                             selectTicketCard={selectTicketCard}
                             onOpenBookModal={(curentData) => {
-                                console.log(
-                                    "Забронировать " +
-                                        curentData.flightInfo.origin
-                                )
                                 setIsOpenModal(false)
                                 setIsOpenBookModal(true)
                             }}
                         ></ShowInfoTickedCard>
                     )}
-                    {isOpenBookModal && <ShowBookModal></ShowBookModal>}
+                    {isOpenBookModal && (
+                        <ShowBookModal
+                            isOpenModal={isOpenBookModal}
+                            onCloseModal={() => setIsOpenBookModal(false)}
+                        ></ShowBookModal>
+                    )}
                 </>
             )}
         </>
