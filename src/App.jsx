@@ -13,6 +13,9 @@ export default function App() {
     const { tickets, loading, error } = useGetTickets()
     const [sorting, setSorting] = useState("lowPrice")
     const [transfer, setTransfer] = useState("all")
+    const [selectTicketCard, setSelectTicketCard] = useState(false)
+
+    console.log(selectTicketCard)
 
     const filterData = filterDataFunc(tickets, transfer) // фильтрация по кол-ву пересадок
     const sortedData = sortedDataFunc(filterData, sorting) // сортирует уже отфильтрованый массив по самому дешевому или самому быстрому

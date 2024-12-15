@@ -1,8 +1,8 @@
 import "./TicketCard.scss"
 
-export default function TicketCard({ ticketData }) {
+export default function TicketCard({ ticketData, ...props }) {
     return (
-        <div className="ticketCard">
+        <div className="ticketCard" {...props}>
             <div className="ticketCard__leftPanel">
                 <div className="ticketCard__price">{ticketData.price}</div>
                 <div className="selectButton">Выбрать билет</div>
