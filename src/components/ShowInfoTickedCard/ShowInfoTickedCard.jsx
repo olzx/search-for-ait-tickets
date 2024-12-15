@@ -6,6 +6,7 @@ export default function ShowInfoTickedCard({
     isOpenModal,
     onCloseModal,
     selectTicketCard,
+    onOpenBookModal,
 }) {
     return (
         <Modal isOpen={isOpenModal}>
@@ -72,7 +73,10 @@ export default function ShowInfoTickedCard({
             <hr />
             <footer className="showInfoTickedCard__bottom">
                 <Button onClick={() => onCloseModal()}>Закрыть</Button>
-                <Button isActive={true} onClick={() => onCloseModal()}>
+                <Button
+                    isActive={true}
+                    onClick={() => onOpenBookModal(selectTicketCard)}
+                >
                     Забронировать
                 </Button>
             </footer>
