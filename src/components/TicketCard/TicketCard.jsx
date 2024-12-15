@@ -49,7 +49,10 @@ export default function TicketCard({ ticketData }) {
                 <div className="ticketCard__downPanel">
                     <div className="transfers">
                         <div className="transfers__amount">
-                            Пересадки - {ticketData.transfers}
+                            Пересадки -{" "}
+                            {ticketData.transfers !== 0
+                                ? ticketData.transfers
+                                : "нет"}
                         </div>
                         <div className="transfers__locations">
                             {ticketData.transfers ? (
