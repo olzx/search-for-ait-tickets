@@ -1,6 +1,7 @@
 import { useState } from "react"
 import CheckboxButton from "../CheckboxButton/CheckboxButton"
 import "./Transfer.scss"
+import getTransfersArray from "../../utils/getTransfersArray"
 
 export default function Transfer({ onClick, ticketsData }) {
     const [tabName, setTabName] = useState("all")
@@ -10,12 +11,8 @@ export default function Transfer({ onClick, ticketsData }) {
         onClick && onClick(name)
     }
 
-    // создаем массив с кол-вом пересадок (что бы далее создать кнопки)
-    const transfersArray = ticketsData.map((ticket) => ticket.transfers)
-    // Удаление повторяющихся значений и сортировка массива по возрастанию
-    const sortedTransfersArray = [...new Set(transfersArray)].sort(
-        (a, b) => a - b
-    )
+    // массив с кол-вом пересадок
+    const sortedTransfersArray = getTransfersArray(ticketsData)
 
     // окончание строки в зависимости от числа
     function getTransfersText(count) {
