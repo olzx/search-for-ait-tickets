@@ -11,6 +11,10 @@
         box-shadow: 0px 2px 8px rgba(33, 33, 38, 0.76);
     }
 
+    @media (max-width: 612px) {
+        flex-direction: column-reverse;
+    }
+
     &__leftPanel {
         display: flex;
         flex-direction: column;
@@ -18,6 +22,13 @@
 
         width: 220px;
         border-right: 2px solid #ccc;
+
+        @media (max-width: 612px) {
+            border-right: 0px;
+            border-top: 2px solid #ccc;
+            width: 100%;
+            padding-bottom: 10px;
+        }
     }
 
     &__rightPanel {
@@ -33,6 +44,10 @@
         color: #4d4d4d;
         margin-top: 10px;
         margin-bottom: 20px;
+
+        @media (max-width: 612px) {
+            margin-bottom: 10px;
+        }
     }
 
     &__middlePanel {
@@ -47,6 +62,10 @@
 
 .flightInfo {
     display: flex;
+
+    @media (max-width: 400px) {
+        flex-direction: column;
+    }
 
     &__left {
         text-align: left;
@@ -67,6 +86,10 @@
             background-color: #969696;
             top: 37px;
             border-radius: 10px;
+
+            @media (max-width: 750px) {
+                display: none;
+            }
         }
     }
 
@@ -77,11 +100,19 @@
 
     &__time {
         font-size: 25px;
+
+        @media (max-width: 400px) {
+            font-size: 18px;
+        }
     }
 
     &__city {
         color: #969696;
         font-weight: bold;
+
+        @media (max-width: 400px) {
+            font-size: 16px;
+        }
     }
 
     &__date {
